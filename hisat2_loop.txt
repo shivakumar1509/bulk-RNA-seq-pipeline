@@ -1,0 +1,9 @@
+while read V 
+do
+echo $V
+
+date
+hisat2 -x /home/shivrv/experiments/1-18SR_MDP_IEDAP/human_index_output/GRCh38_r104.all -1 /home/shivrv/experiments/1-18SR_MDP_IEDAP/rawdata/$V_1.fq -2 /home/shivrv/experiments/1-18SR_MDP_IEDAP/rawdata/$V_2.fq -S /data/shiv/samfiles/$V.sam
+date
+
+done < /home/shivrv/experiments/1-18SR_MDP_IEDAP/samples.txt
